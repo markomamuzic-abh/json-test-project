@@ -13,7 +13,6 @@ public class stepdefinitions {
     generic_substeps theApplication;
     @Given("user has access to JsonPlaceholder")
     public void userHasAccessToJsonPlaceholder() {
-
         theApplication.GetUserById();
     }
 
