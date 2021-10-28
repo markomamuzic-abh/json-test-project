@@ -7,6 +7,7 @@ Feature: Smoke test
   Scenario: End to end flow for JsonPlaceholder application
     Given user has access to JsonPlaceholder
     When user successfully created album
-    And user is able to list all of the albums
+    And user is able to get album by id
+    And user is able to update album
     Then verify the album belongs to the appropriate user
-    And delete user
+    And delete album

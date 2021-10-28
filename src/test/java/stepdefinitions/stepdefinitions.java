@@ -12,27 +12,28 @@ public class stepdefinitions {
     @Steps
     generic_substeps theApplication;
     @Given("user has access to JsonPlaceholder")
-    public void userHasAccessToJsonPlaceholder() {
-        theApplication.GetUserById();
-    }
+    public void userHasAccessToJsonPlaceholder() { theApplication.CreateNewUser(); }
 
     @When("user successfully created album")
     public void userSuccessfullyCreatedAlbum() {
         theApplication.CreateNewAlbum();
     }
 
-    @And("user is able to list all of the albums")
-    public void userIsAbleToListAllOfTheAlbums() {
-        theApplication.GetListOfAllAlbums();
+    @And("user is able to get album by id")
+    public void userIsAbleToGetAlbumById() {
+        theApplication.GetAlbumById();
+    }
+
+    @And("user is able to update album")
+    public void userIsAbleToUpdateAlbumById() {
+        theApplication.UpdateAlbum();
     }
 
     @Then("verify the album belongs to the appropriate user")
-    public void verifyTheAlbumBelongsToTheAppropriateUser() {
-        theApplication.VerifyTheAlbumBelongsToTheAppropriateUser();
-    }
+    public void verifyTheAlbumBelongsToTheAppropriateUser() { theApplication.VerifyTheAlbumBelongsToTheAppropriateUser(); }
 
-    @And("delete user")
-    public void deleteUser() {
-        theApplication.DeleteUser();
+    @And("delete album")
+    public void deleteAlbum() {
+        theApplication.DeleteAlbum();
     }
 }
